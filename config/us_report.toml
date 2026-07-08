@@ -1,0 +1,48 @@
+[report]
+market = "US"
+timezone = "Asia/Seoul"
+send_time = "21:00"
+title_prefix = "미국주식 데일리 리포트"
+output_dir = "output/reports/us"
+fallback_to_sample_when_no_keys = true
+
+[email]
+smtp_host = "smtp.gmail.com"
+smtp_port = 587
+smtp_user_env = "SMTP_USER"
+smtp_password_env = "SMTP_APP_PASSWORD"
+mail_to_env = "MAIL_TO"
+from_name = "Stock Info Bot"
+subject_prefix = "[US Stocks]"
+
+[watchlist]
+symbols = [
+  "NVDA",
+  "AAPL",
+  "MSFT",
+  "AMZN",
+  "META",
+  "GOOGL",
+  "TSLA",
+  "AVGO",
+  "AMD",
+  "PLTR"
+]
+
+[market]
+snapshot_symbols = ["SPY", "QQQ", "DIA", "IWM", "VIXY"]
+
+[sources]
+enabled = ["fmp", "finnhub", "alpha_vantage", "fred"]
+fmp_api_key_env = "FMP_API_KEY"
+finnhub_api_key_env = "FINNHUB_API_KEY"
+alphavantage_api_key_env = "ALPHAVANTAGE_API_KEY"
+fred_api_key_env = "FRED_API_KEY"
+request_timeout_seconds = 12
+
+[references]
+Investing = "https://www.investing.com/"
+Finviz = "https://finviz.com/"
+Yahoo_Finance = "https://finance.yahoo.com/"
+TradingView = "https://www.tradingview.com/markets/stocks-usa/"
+Macrotrends = "https://www.macrotrends.net/"
