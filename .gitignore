@@ -3,6 +3,7 @@
 !.env.example
 
 # Generated reports and runtime output
+Samples/
 output/
 logs/
 *.log
